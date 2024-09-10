@@ -1,4 +1,4 @@
 // index.js
-import myDefault from "./homepage.js";
+import homepageLoad from "./homepage.js";
 
-myDefault();
+window.addEventListener("load", () => homepageLoad());

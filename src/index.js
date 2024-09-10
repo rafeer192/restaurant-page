@@ -1,3 +1,4 @@
 // index.js
+import myDefault from "./homepage.js";
 
-console.log("hello");
+myDefault();

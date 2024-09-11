@@ -1,4 +1,5 @@
 // homepage.js
+import "./homestyle.css";
 import chickenSandwich from "./images/chicken-sandwich.jpg";
 import interior from "./images/interior.jpg";
 import shrimp from "./images/shrimp.jpg"; 
@@ -6,9 +7,16 @@ import wholeWings from "./images/whole-wings.jpg";
 
 export default function() {
   const content = document.querySelector("#content");
+  const headingDiv = document.createElement("div"); 
+  headingDiv.classList.add("heading")
   const h1 = document.createElement("h1"); 
   h1.textContent = "Kickin' Chicken"; 
-  content.appendChild(h1);
+  const chickenSandwichImg = document.createElement("img"); 
+  chickenSandwichImg.src = chickenSandwich;
+  chickenSandwichImg.alt = "Our fried chicken sandwich over a red background."; 
+  headingDiv.appendChild(h1); 
+  headingDiv.appendChild(chickenSandwichImg);
+  content.appendChild(headingDiv);
   const infoCard = document.createElement("div"); 
   const h2 = document.createElement("h2"); 
   h2.textContent = "Feeling hungry?";
@@ -34,20 +42,16 @@ export default function() {
   whyUs.appendChild(whyUsH2); 
   whyUs.appendChild(whyDesc);
   content.appendChild(whyUs);
-  const chickenSandwichImg = document.createElement("img"); 
   const interiorImg = document.createElement("img"); 
   const shrimpImg = document.createElement("img"); 
   const wholeWingsImg = document.createElement("img"); 
   const imagesWrapper = document.createElement("div"); 
-  chickenSandwichImg.src = chickenSandwich;
-  chickenSandwichImg.alt = "Our fried chicken sandwich over a red background."; 
   interiorImg.src = interior; 
   interiorImg.alt = "The interior of Kickin' Chicken's dining area."; 
   shrimpImg.src = shrimp; 
   shrimpImg.alt = "A plate of our fried shrimp."; 
   wholeWingsImg.src = wholeWings; 
   wholeWingsImg.alt = "A plate of our famous fried whole wings.";
-  imagesWrapper.appendChild(chickenSandwichImg); 
   imagesWrapper.appendChild(interiorImg); 
   imagesWrapper.appendChild(shrimpImg); 
   imagesWrapper.appendChild(wholeWingsImg);

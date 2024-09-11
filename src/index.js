@@ -1,6 +1,8 @@
 // index.js
+import "./style.css"
 import showHomePage from "./homepage.js";
 import showMenu from "./menu.js";
+import showContact from "./contact.js"
 
 window.addEventListener("load", () => showHomePage());
 
@@ -15,11 +17,11 @@ navBtns.forEach(btn => btn.addEventListener("click", (event) => {
   event.target.classList.add("selected");
   const content = document.querySelector("#content"); 
   content.textContent = "";
-  if(event.target.textContent === "Home") {
+  if(event.target.textContent === "Home" || event.target.textContent === "Kickin' Chicken") {
     showHomePage();
   } else if(event.target.textContent === "Menu") {
     showMenu(); 
   } else {
-    console.log("not done");
+    showContact();
   }
 })); 

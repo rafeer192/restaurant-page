@@ -10,10 +10,12 @@ export default function() {
   h2.textContent = "Our menu";
   menuImg1.src = menu1;
   menuImg1.alt = "The first page of our brochure style menu.";
-  menuImg1.height = 500;
+  menuImg1.style.width = "50vw";
+  menuImg1.style.display = "block";
   menuImg2.src = menu2; 
   menuImg2.alt = "The second page of our brochure style menu.";
-  menuImg2.height = 500;
+  menuImg2.style.width = "50vw";
+  menuImg2.style.display = "block";  
   content.appendChild(h2);
   content.appendChild(menuImg1); 
   content.appendChild(menuImg2);

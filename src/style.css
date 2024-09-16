@@ -32,8 +32,9 @@ header {
   height: 10vh;
   display: grid;
   align-items: center;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(215, 29, 29);
   padding: 0 24px;
+  font-weight: 900;
 }
 
 header nav {

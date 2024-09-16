@@ -8,16 +8,19 @@ import wholeWings from "./images/whole-wings.jpg";
 export default function() {
   const content = document.querySelector("#content");
   const headingDiv = document.createElement("div"); 
-  headingDiv.classList.add("heading")
+  headingDiv.classList.add("heading"); 
+  const headingText = document.createElement("div");
   const h1 = document.createElement("h1"); 
   h1.textContent = "Kickin' Chicken"; 
-  const chickenSandwichImg = document.createElement("img"); 
-  chickenSandwichImg.src = chickenSandwich;
-  chickenSandwichImg.alt = "Our fried chicken sandwich over a red background."; 
-  headingDiv.appendChild(h1); 
-  headingDiv.appendChild(chickenSandwichImg);
+  const seeMore = document.createElement("a"); 
+  seeMore.href = "#info";
+  seeMore.textContent = "See More";
+  headingText.appendChild(h1); 
+  headingText.appendChild(seeMore);
+  headingDiv.appendChild(headingText); 
   content.appendChild(headingDiv);
   const infoCard = document.createElement("div"); 
+  infoCard.id = "info";
   const h2 = document.createElement("h2"); 
   h2.textContent = "Feeling hungry?";
   const desc = document.createElement("p"); 
@@ -45,6 +48,7 @@ export default function() {
   const interiorImg = document.createElement("img"); 
   const shrimpImg = document.createElement("img"); 
   const wholeWingsImg = document.createElement("img"); 
+  const chickenSandwichImg = document.createElement("img"); 
   const imagesWrapper = document.createElement("div"); 
   interiorImg.src = interior; 
   interiorImg.alt = "The interior of Kickin' Chicken's dining area."; 
@@ -52,6 +56,8 @@ export default function() {
   shrimpImg.alt = "A plate of our fried shrimp."; 
   wholeWingsImg.src = wholeWings; 
   wholeWingsImg.alt = "A plate of our famous fried whole wings.";
+  chickenSandwichImg.src = chickenSandwich;
+  chickenSandwichImg.alt = "Our fried chicken sandwich over a red background."; 
   imagesWrapper.appendChild(interiorImg); 
   imagesWrapper.appendChild(shrimpImg); 
   imagesWrapper.appendChild(wholeWingsImg);
